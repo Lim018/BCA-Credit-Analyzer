@@ -522,8 +522,8 @@ const BCAFuzzyCreditAnalyzer = () => {
                 </div>
               </div>
               <div className="text-right">
-                <div className="text-sm text-gray-500">Powered by</div>
-                <div className="text-lg font-bold text-blue-600">Fuzzy Tsukamoto Logic</div>
+                <div className="text-sm text-gray-500">Dengan mengakses situs ini, Anda telah menyetujui penggunaan</div>
+                <div className="text-lg font-bold text-blue-600">cookies dari kami</div>
               </div>
             </div>
           </div>
@@ -539,8 +539,7 @@ const BCAFuzzyCreditAnalyzer = () => {
             </div>
             <h2 className="text-4xl font-bold text-gray-800 mb-3">Analisis Kredit Selesai</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Berikut hasil evaluasi komprehensif risiko dan kemampuan finansial Anda berdasarkan algoritma Fuzzy
-              Tsukamoto
+              Berikut hasil evaluasi komprehensif risiko dan kemampuan finansial Anda
             </p>
           </div>
 
@@ -624,10 +623,6 @@ const BCAFuzzyCreditAnalyzer = () => {
                     <span className="font-bold text-green-600">
                       {Object.keys(answers).length > 5 ? "Lengkap" : "Partial"}
                     </span>
-                  </div>
-                  <div className="flex justify-between items-center py-2">
-                    <span className="text-gray-600">Metode Analisis:</span>
-                    <span className="font-bold text-purple-600">Fuzzy Tsukamoto</span>
                   </div>
                 </div>
               </div>
@@ -782,10 +777,10 @@ const BCAFuzzyCreditAnalyzer = () => {
                 <p className="text-sm text-gray-600">Bank Central Asia - Sistem Analisis Kredit</p>
               </div>
             </div>
-            <div className="text-right">
-              <div className="text-sm text-gray-500">Powered by</div>
-              <div className="text-lg font-bold text-blue-600">Fuzzy Tsukamoto Logic</div>
-            </div>
+              <div className="text-right">
+                <div className="text-sm text-gray-500">Dengan mengakses situs ini, Anda telah menyetujui penggunaan</div>
+                <div className="text-lg font-bold text-blue-600">cookies dari kami</div>
+              </div>
           </div>
         </div>
       </div>
