@@ -517,7 +517,7 @@ const BCAFuzzyCreditAnalyzer = () => {
                   />
                 </div>
                 <div>
-                  <h1 className="text-2xl font-bold text-blue-900">BCA Credit Analyzer</h1>
+                  <h1 className="text-2xl font-bold text-blue-900">Credit Analyzer</h1>
                   <p className="text-sm text-gray-600">Bank Central Asia - Sistem Analisis Kredit</p>
                 </div>
               </div>
@@ -778,7 +778,7 @@ const BCAFuzzyCreditAnalyzer = () => {
                 />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-blue-900">BCA Credit Analyzer</h1>
+                <h1 className="text-2xl font-bold text-blue-900">Credit Analyzer</h1>
                 <p className="text-sm text-gray-600">Bank Central Asia - Sistem Analisis Kredit</p>
               </div>
             </div>
