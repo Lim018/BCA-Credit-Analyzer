@@ -1,0 +1,88 @@
+/* Progress Bar Component */
+.progress-container {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--gray-100);
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+.progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-3);
+}
+
+.progress-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray-600);
+}
+
+.progress-percentage {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--bca-blue-600);
+}
+
+.progress-bar-container {
+  width: 100%;
+  background-color: var(--gray-200);
+  border-radius: var(--radius-full);
+  height: 0.75rem;
+  margin-bottom: var(--spacing-3);
+  box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+}
+
+.progress-bar {
+  height: 0.75rem;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, var(--bca-blue-500), var(--bca-blue-600));
+  transition: width 500ms ease-out;
+  box-shadow: var(--shadow-sm);
+}
+
+.progress-text {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+}
+
+/* Score Progress Bar */
+.score-progress-container {
+  width: 100%;
+  background-color: var(--gray-200);
+  border-radius: var(--radius-full);
+  height: 1.5rem;
+  margin-bottom: var(--spacing-6);
+  box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+}
+
+.score-progress-bar {
+  height: 1.5rem;
+  border-radius: var(--radius-full);
+  transition: width 1000ms ease-out;
+  box-shadow: var(--shadow-sm);
+}
+
+.score-progress-bar.excellent {
+  background: linear-gradient(90deg, var(--emerald-500), var(--emerald-600));
+}
+
+.score-progress-bar.good {
+  background: linear-gradient(90deg, var(--bca-blue-500), var(--bca-blue-600));
+}
+
+.score-progress-bar.fair {
+  background: linear-gradient(90deg, var(--amber-500), var(--amber-600));
+}
+
+.score-progress-bar.poor {
+  background: linear-gradient(90deg, var(--orange-500), var(--orange-600));
+}
+
+.score-progress-bar.very-poor {
+  background: linear-gradient(90deg, var(--red-500), var(--red-600));
+}

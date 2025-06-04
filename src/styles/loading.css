@@ -1,0 +1,58 @@
+/* Loading Components */
+.loading-screen {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bca-blue-50) 0%, #ffffff 50%, var(--bca-blue-50) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-content {
+  text-align: center;
+}
+
+.loading-icon {
+  width: 5rem;
+  height: 5rem;
+  background: linear-gradient(135deg, var(--bca-blue-500), var(--bca-blue-600));
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-6);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+}
+
+.loading-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: var(--spacing-2);
+}
+
+.loading-subtitle {
+  color: var(--gray-600);
+  margin-bottom: var(--spacing-4);
+}
+
+.loading-dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-1);
+}
+
+.loading-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--bca-blue-500);
+  border-radius: var(--radius-full);
+  animation: bounce 1s infinite;
+}
+
+.loading-dot:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.loading-dot:nth-child(3) {
+  animation-delay: 0.2s;
+}
