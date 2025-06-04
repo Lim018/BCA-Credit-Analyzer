@@ -334,49 +334,55 @@ const BCAFuzzyCreditAnalyzer = () => {
   }
 
   // Fungsi untuk menghitung skor risiko menggunakan logika fuzzy Tsukamoto
-  const calculateRiskScore = () => {
-    let totalScore = 0
-    let totalWeight = 0
+const calculateRiskScore = () => {
+  let totalScore = 0
+  let totalWeight = 0
 
-    const categoryScores = {
-      income: [],
-      employment: [],
-      debt: [],
-      expenses: [],
-      savings: [],
-      credit_history: [],
-      business_profile: [],
-      confidence: [],
-    }
-
-    Object.entries(answers).forEach(([questionId, answer]) => {
-      const question = questionDatabase[questionId]
-      if (question && question.category) {
-        const option = question.options.find((opt) => opt.value === answer)
-        if (option && option.score) {
-          categoryScores[question.category].push({
-            score: option.score,
-            weight: question.weight,
-          })
-        }
-      }
-    })
-
-    Object.entries(categoryScores).forEach(([category, scores]) => {
-      if (scores.length > 0) {
-        const categoryTotal = scores.reduce((sum, item) => sum + item.score * item.weight, 0)
-        const categoryWeight = scores.reduce((sum, item) => sum + item.weight, 0)
-
-        if (categoryWeight > 0) {
-          totalScore += categoryTotal
-          totalWeight += categoryWeight
-        }
-      }
-    })
-
-    const normalizedScore = totalWeight > 0 ? (totalScore / totalWeight) * 10 : 50
-    return Math.min(100, Math.max(0, normalizedScore))
+  const categoryScores = {
+    income: [],
+    employment: [],
+    debt: [],
+    expenses: [],
+    savings: [],
+    credit_history: [],
+    business_profile: [],
+    confidence: [],
+    purpose: [],
+    growth: [],
+    strategy: [],
+    asset_value: [],
   }
+
+  Object.entries(answers).forEach(([questionId, answer]) => {
+    const question = questionDatabase[questionId]
+    if (question && question.category && categoryScores[question.category]) {
+      const option = question.options.find((opt) => opt.value === answer)
+      if (option && option.score) {
+        categoryScores[question.category].push({
+          score: option.score,
+          weight: question.weight,
+        })
+      }
+    } else {
+      console.warn(`Unknown category or invalid question: ${questionId}, category: ${question?.category}`)
+    }
+  })
+
+  Object.entries(categoryScores).forEach(([category, scores]) => {
+    if (scores.length > 0) {
+      const categoryTotal = scores.reduce((sum, item) => sum + item.score * item.weight, 0)
+      const categoryWeight = scores.reduce((sum, item) => sum + item.weight, 0)
+
+      if (categoryWeight > 0) {
+        totalScore += categoryTotal
+        totalWeight += categoryWeight
+      }
+    }
+  })
+
+  const normalizedScore = totalWeight > 0 ? (totalScore / totalWeight) * 10 : 50
+  return Math.min(100, Math.max(0, normalizedScore))
+}
 
   // Interpretasi risiko
   const getRiskInterpretation = (score) => {
