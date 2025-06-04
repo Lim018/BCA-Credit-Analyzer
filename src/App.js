@@ -476,7 +476,7 @@ const BCAFuzzyCreditAnalyzer = () => {
         <div className="loading-content animate-fade-in">
           <div className="loading-icon animate-pulse-slow shadow-glow">
             <img 
-              src="/images/bca-logo.png" 
+              src={process.env.PUBLIC_URL + '/images/bca-logo.png'}
               alt="BCA Logo" 
               style={{ width: "40px", height: "40px", objectFit: "contain" }}
             />
@@ -511,7 +511,7 @@ const BCAFuzzyCreditAnalyzer = () => {
               <div className="flex items-center space-x-4">
                 <div className="bca-logo-container">
                   <img 
-                    src="/images/bca-logo.png" 
+                    src={process.env.PUBLIC_URL + '/images/bca-logo.png'}
                     alt="BCA Logo" 
                     className="bca-logo-header"
                   />
@@ -767,7 +767,7 @@ const BCAFuzzyCreditAnalyzer = () => {
             <div className="flex items-center space-x-4">
               <div className="bca-logo-container">
                 <img 
-                  src="/images/bca-logo.png" 
+                  src={process.env.PUBLIC_URL + '/images/bca-logo.png'}
                   alt="BCA Logo" 
                   className="bca-logo-header"
                 />
@@ -818,7 +818,7 @@ const BCAFuzzyCreditAnalyzer = () => {
                 )}
                 {currentQuestion.category === "business_profile" && (
                   <img 
-                    src="/images/bca-logo.png" 
+                    src={process.env.PUBLIC_URL + '/images/bca-logo.png'}
                     alt="BCA Logo" 
                     style={{ width: "28px", height: "28px", objectFit: "contain", filter: "brightness(0) invert(1)" }}
                   />
