@@ -1,22 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import {
-  ChevronRight,
-  User,
-  DollarSign,
-  TrendingUp,
-  AlertCircle,
-  CheckCircle,
-  Building2,
-  Shield,
-  Award,
-  BarChart3,
-  Phone,
-  MapPin,
-  Clock,
-  Star,
-} from "lucide-react"
+import { ChevronRight, User, DollarSign, TrendingUp, AlertCircle, CheckCircle, Shield, Award, BarChart3, Phone, MapPin, Clock, Star } from 'lucide-react'
 
 // Import CSS files
 import "./styles/reset.css"
@@ -490,7 +475,11 @@ const BCAFuzzyCreditAnalyzer = () => {
       <div className="loading-screen">
         <div className="loading-content animate-fade-in">
           <div className="loading-icon animate-pulse-slow shadow-glow">
-            <Building2 className="w-10 h-10" style={{ color: "white" }} />
+            <img 
+              src="/images/bca-logo.png" 
+              alt="BCA Logo" 
+              style={{ width: "40px", height: "40px", objectFit: "contain" }}
+            />
           </div>
           <h2 className="loading-title">BCA Credit Analyzer</h2>
           <p className="loading-subtitle">
@@ -520,16 +509,21 @@ const BCAFuzzyCreditAnalyzer = () => {
           <div className="container">
             <div className="flex items-center justify-between py-4">
               <div className="flex items-center space-x-4">
-                <div
-                  className="w-12 h-12 rounded-lg flex items-center justify-center shadow-lg"
-                  style={{ background: "linear-gradient(135deg, var(--bca-blue-600), var(--bca-blue-700))" }}
-                >
-                  <Building2 className="w-8 h-8" style={{ color: "white" }} />
+                <div className="bca-logo-container">
+                  <img 
+                    src="/images/bca-logo.png" 
+                    alt="BCA Logo" 
+                    className="bca-logo-header"
+                  />
                 </div>
                 <div>
                   <h1 className="text-2xl font-bold text-blue-900">BCA Credit Analyzer</h1>
                   <p className="text-sm text-gray-600">Bank Central Asia - Sistem Analisis Kredit</p>
                 </div>
+              </div>
+              <div className="text-right">
+                <div className="text-sm text-gray-500">Powered by</div>
+                <div className="text-lg font-bold text-blue-600">Fuzzy Tsukamoto Logic</div>
               </div>
             </div>
           </div>
@@ -545,7 +539,8 @@ const BCAFuzzyCreditAnalyzer = () => {
             </div>
             <h2 className="text-4xl font-bold text-gray-800 mb-3">Analisis Kredit Selesai</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Berikut hasil evaluasi komprehensif risiko dan kemampuan finansial Anda
+              Berikut hasil evaluasi komprehensif risiko dan kemampuan finansial Anda berdasarkan algoritma Fuzzy
+              Tsukamoto
             </p>
           </div>
 
@@ -629,6 +624,10 @@ const BCAFuzzyCreditAnalyzer = () => {
                     <span className="font-bold text-green-600">
                       {Object.keys(answers).length > 5 ? "Lengkap" : "Partial"}
                     </span>
+                  </div>
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-gray-600">Metode Analisis:</span>
+                    <span className="font-bold text-purple-600">Fuzzy Tsukamoto</span>
                   </div>
                 </div>
               </div>
@@ -771,16 +770,21 @@ const BCAFuzzyCreditAnalyzer = () => {
         <div className="container">
           <div className="flex items-center justify-between py-4">
             <div className="flex items-center space-x-4">
-              <div
-                className="w-12 h-12 rounded-lg flex items-center justify-center shadow-lg"
-                style={{ background: "linear-gradient(135deg, var(--bca-blue-600), var(--bca-blue-700))" }}
-              >
-                <Building2 className="w-8 h-8" style={{ color: "white" }} />
+              <div className="bca-logo-container">
+                <img 
+                  src="/images/bca-logo.png" 
+                  alt="BCA Logo" 
+                  className="bca-logo-header"
+                />
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-blue-900">BCA Credit Analyzer</h1>
                 <p className="text-sm text-gray-600">Bank Central Asia - Sistem Analisis Kredit</p>
               </div>
+            </div>
+            <div className="text-right">
+              <div className="text-sm text-gray-500">Powered by</div>
+              <div className="text-lg font-bold text-blue-600">Fuzzy Tsukamoto Logic</div>
             </div>
           </div>
         </div>
@@ -818,7 +822,11 @@ const BCAFuzzyCreditAnalyzer = () => {
                   <TrendingUp className="w-7 h-7" style={{ color: "white" }} />
                 )}
                 {currentQuestion.category === "business_profile" && (
-                  <Building2 className="w-7 h-7" style={{ color: "white" }} />
+                  <img 
+                    src="/images/bca-logo.png" 
+                    alt="BCA Logo" 
+                    style={{ width: "28px", height: "28px", objectFit: "contain", filter: "brightness(0) invert(1)" }}
+                  />
                 )}
                 {!["income", "employment", "debt", "expenses", "savings", "business_profile"].includes(
                   currentQuestion.category,

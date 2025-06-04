@@ -17,6 +17,36 @@
   padding: 0 var(--spacing-6);
 }
 
+/* BCA Logo Styles */
+.bca-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-2);
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+}
+
+.bca-logo-header {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+.bca-logo-small {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+}
+
+.bca-logo-large {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+}
+
 /* Grid System */
 .grid {
   display: grid;

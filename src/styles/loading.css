@@ -14,13 +14,14 @@
 .loading-icon {
   width: 5rem;
   height: 5rem;
-  background: linear-gradient(135deg, var(--bca-blue-500), var(--bca-blue-600));
+  background: white;
   border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto var(--spacing-6);
   box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+  border: 2px solid var(--bca-blue-200);
 }
 
 .loading-title {
